@@ -97,6 +97,7 @@ services:
     ports:
       - "5044:5044"
       - "9600:9600"
+      - "5000:5000"
     healthcheck:
       test: ["CMD", "curl", "-s" ,"-XGET", "http://127.0.0.1:9600"]
 
