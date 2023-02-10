@@ -92,7 +92,7 @@ services:
     environment:
 #      ELASTIC_USERNAME: ${ELASTIC_USERNAME}
 #      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
-      ELASTICSEARCH_HOST_PORT: https://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}
+      ELASTICSEARCH_HOST_PORT: http://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}
       LS_JAVA_OPTS: "-Xmx${LOGSTASH_HEAP} -Xms${LOGSTASH_HEAP} -Dlog4j2.formatMsgNoLookups=true"
     ports:
       - "5044:5044"
@@ -113,7 +113,7 @@ services:
     environment:
 #      ELASTIC_USERNAME: ${ELASTIC_USERNAME}
 #      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
-      ELASTICSEARCH_HOST_PORT: https://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}
+      ELASTICSEARCH_HOST_PORT: http://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}
     env_file:
       - ./secrets/.env.kibana.token
     secrets:
